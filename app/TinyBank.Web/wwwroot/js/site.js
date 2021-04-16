@@ -6,7 +6,6 @@
 
 $('.js-update-customer').on('click',
     (event) => {
-        debugger;
         let firstName = $('.js-first-name').val();
         let lastName = $('.js-last-name').val();
         let customerId = $('.js-customer-id').val();
@@ -62,9 +61,7 @@ $('.js-card-pay').on('click',
         method: 'POST',
         contentType: 'application/json',
         data: data
-    }).done(response => {       
-        // success
-        debugger;       
+    }).done(response => {               
         if (response.success) {
             $('.js-show-success').show();
             $('.js-show-fail').hide();            
